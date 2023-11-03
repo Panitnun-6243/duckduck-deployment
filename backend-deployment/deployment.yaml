@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: duckduck-server-deployment
+  labels:
+    app: duckduck-server
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: duckduck-server
+  template:
+    metadata:
+      labels:
+        app: duckduck-server
+    spec:
+      containers:
+        - name: duckduck-server
+          image: asia-southeast1-docker.pkg.dev/encoded-road-401507/duckduck-artifact/duckduck-server:latest
+          ports:
+            - containerPort: 5050
+      imagePullSecrets:
+        - name: gcr-secret
