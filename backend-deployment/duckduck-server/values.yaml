@@ -52,7 +52,12 @@ ingress:
     - host: dduck.panitnun.tech
       paths:
         - path: /
-          pathType: ImplementationSpecific
+          pathType: Prefix
+          backend:
+            service:
+              name: duckducke-service
+              port:
+                number: 5050
   tls:
     - secretName: duckduck-server-tls # This secret will be created by cert-manager
       hosts:
