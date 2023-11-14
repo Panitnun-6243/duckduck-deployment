@@ -49,15 +49,16 @@ ingress:
     cert-manager.io/cluster-issuer: letsencrypt-prod
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: "*"
-      paths:
-        - path: /
-          pathType: Prefix
-          backend:
-            service:
-              name: duckducke-service
-              port:
-                number: 5050
+    - host: dduck.panitnun.tech
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: duckducke-service
+                port:
+                  number: 5050
   tls:
     - secretName: duckduck-server-tls # This secret will be created by cert-manager
       hosts:
