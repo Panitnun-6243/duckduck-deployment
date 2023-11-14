@@ -1,0 +1,6 @@
+apiVersion: v2
+name: duckduck-server
+description: A Helm chart for DuckDuck Server
+type: application
+version: 0.1.0
+appVersion: "1.16.0"
