@@ -5,7 +5,8 @@ image:
   pullPolicy: IfNotPresent
   tag: "68b98f77c6778d108634e56cf301380efbc7e397"
 
-imagePullSecrets: []
+imagePullSecrets:
+  - name: gcr-json-key
 nameOverride: ""
 fullnameOverride: ""
 
