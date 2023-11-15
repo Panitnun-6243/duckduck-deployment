@@ -49,6 +49,7 @@ ingress:
     cert-manager.io/cluster-issuer: letsencrypt-prod
     nginx.ingress.kubernetes.io/rewrite-target: /
     kubernetes.io/tls-acme: "true"
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
   hosts:
     - host: dduck.panitnun.tech
       paths:
