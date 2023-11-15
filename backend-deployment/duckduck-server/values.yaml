@@ -47,13 +47,12 @@ ingress:
   annotations:
     kubernetes.io/ingress.class: nginx
     cert-manager.io/cluster-issuer: letsencrypt-prod
-    nginx.ingress.kubernetes.io/rewrite-target: /
-    nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
     nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
   hosts:
     - host: dduck.panitnun.tech
       paths:
-        - path: /
+        - path: /?(.*)
           pathType: Prefix
           backend:
             service:
@@ -64,9 +63,6 @@ ingress:
     - secretName: duckduck-server-tls # This secret will be created by cert-manager
       hosts:
         - dduck.panitnun.tech
-  #  - secretName: chart-example-tls
-  #    hosts:
-  #      - chart-example.local
 
 resources:
   {}
