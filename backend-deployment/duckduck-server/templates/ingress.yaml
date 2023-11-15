@@ -55,7 +55,7 @@ spec:
                   number: {{ $svcPort }}
               {{- else }}
               serviceName: {{ $fullName }}
-              servicePort: {{ $svcPort }}
+              servicePort: 443
               {{- end }}
           {{- end }}
     {{- end }}
