@@ -11,7 +11,7 @@ data:
     log_dest stdout
 
     # MQTT with TLS (MQTTS)
-    listener 1883
+    listener 8883
     protocol mqtt
     allow_anonymous true
 
