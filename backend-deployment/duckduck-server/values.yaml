@@ -3,7 +3,7 @@ replicaCount: 1
 image:
   repository: asia-southeast1-docker.pkg.dev/encoded-road-401507/duckduck-artifact/duckduck-server
   pullPolicy: IfNotPresent
-  tag: "ac84932caa4955654d79187000761524aec4d324"
+  tag: "ca10270dea2c7885e4d3692ca561405cedff2b99"
 
 imagePullSecrets:
   - name: gcr-json-key
