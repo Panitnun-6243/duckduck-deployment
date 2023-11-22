@@ -4,6 +4,9 @@ metadata:
   name: mosquitto-config
 data:
   mosquitto.conf: |
+    listener 9001
+    protocol websockets
+
     listener 1883
     persistence true
     persistence_location /mosquitto/data/
