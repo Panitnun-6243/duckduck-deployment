@@ -9,11 +9,10 @@ data:
 
     log_dest stdout
 
-    # MQTT with TLS (MQTTS)
-    listener 1883
-    protocol mqtt
     allow_anonymous true
+    listener 1883 0.0.0.0
 
+    listener 8883 0.0.0.0
     cafile /etc/ssl/certs/ca-certificates.crt
     keyfile /mosquitto/certs/tls.key
     certfile /mosquitto/certs/tls.crt
