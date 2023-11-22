@@ -12,4 +12,4 @@ data:
     persistence_location /mosquitto/data/
     log_dest file /mosquitto/log/mosquitto.log
     allow_anonymous false
-    password_file passwordfile
+    password_file /etc/mosquitto/passwordfile
