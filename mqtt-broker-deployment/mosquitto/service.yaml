@@ -3,11 +3,10 @@ kind: Service
 metadata:
   name: mosquitto-mqtts
 spec:
-  type: ClusterIP
-  selector:
-    app: mosquitto
+  type: LoadBalancer
   ports:
     - name: mqtts
       port: 8883
-      protocol: TCP
       targetPort: 8883
+  selector:
+    app: mosquitto
