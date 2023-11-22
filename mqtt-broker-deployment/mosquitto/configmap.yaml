@@ -4,17 +4,15 @@ metadata:
   name: mosquitto-config
 data:
   mosquitto.conf: |
-
     persistence true
     persistence_location /mosquitto/data/
 
     log_dest stdout
 
-    # MQTT with TLS (MQTTS)
     listener 8883
     protocol mqtt
     allow_anonymous true
 
-    cafile /etc/ssl/certs/ca-certificates.crt
+    cafile /mosquitto/certs/ca-certificates.crt
     keyfile /mosquitto/certs/tls.key
     certfile /mosquitto/certs/tls.crt
