@@ -4,12 +4,13 @@ metadata:
   name: mosquitto-config
 data:
   mosquitto.conf: |
-    listener 9001
-    protocol websockets
-
     listener 1883
     persistence true
     persistence_location /mosquitto/data/
     log_dest file /mosquitto/log/mosquitto.log
     allow_anonymous false
     password_file /etc/mosquitto/passwordfile
+
+    # WebSocket listener
+    listener 9001
+    protocol websockets
